@@ -46,5 +46,5 @@ $urlBuilder->setUseBase64(true);
 
 echo $urlBuilder->createURL("856c4490-784f-4a8e-a918-aa66c0398a9q", 'png', $params);
 
-// https://example.domain.com/v1/856c4490-784f-4a8e-a918-aa66c0398a9q.png?bc=eyJ3Ijo1MDAsImgiOjUwMCwi...
+// https://example.domain.com/v1/856c4490-784f-4a8e-a918-aa66c0398a9q.png?bc=eyJ3Ijo1MDAs...
 ```
