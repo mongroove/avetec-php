@@ -44,6 +44,7 @@ echo $urlBuilder->createURL("856c4490-784f-4a8e-a918-aa66c0398a9q", 'png', $para
 The parameters can be bundled and output with an encrypted base64 parameter, call `setUseBase64` on the builder.
 
 ```php
+$urlBuilder->setUseBase64(true);
 echo $urlBuilder->createURL("856c4490-784f-4a8e-a918-aa66c0398a9q", 'png', $params);
 
 // https://example.domain.com/v1/856c4490-784f-4a8e-a918-aa66c0398a9q.png?bc=eyJ3Ijo1MDAs...
