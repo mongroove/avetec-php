@@ -11,7 +11,7 @@ A php client library for generating image URLs with avetec
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Base64 Params](#base64-params)
+- [Advanced functions](#advanced-functions)
 
 ## Installation
 
@@ -37,14 +37,24 @@ echo $urlBuilder->createURL("856c4490-784f-4a8e-a918-aa66c0398a9q", 'png', $para
 // 'https://example.domain.com/856c4490-784f-4a8e-a918-aa66c0398a9q.png?h=500&w=500'
 ```
 
-## Base64 params
+## Advanced functions
+
+### Base64 Params
 
 The parameters can be bundled and output with an encrypted base64 parameter, call `setUseBase64` on the builder.
 
 ```php
-$urlBuilder->setUseBase64(true);
-
 echo $urlBuilder->createURL("856c4490-784f-4a8e-a918-aa66c0398a9q", 'png', $params);
 
 // https://example.domain.com/v1/856c4490-784f-4a8e-a918-aa66c0398a9q.png?bc=eyJ3Ijo1MDAs...
+```
+
+### Add slug
+
+To pass a slug, an additional parameter can be inserted as follows.
+
+```php
+echo $urlBuilder->createURL("856c4490-784f-4a8e-a918-aa66c0398a9q", 'png', $params, 'special');
+
+// 'https://example.domain.com/special/856c4490-784f-4a8e-a918-aa66c0398a9q.png'
 ```
